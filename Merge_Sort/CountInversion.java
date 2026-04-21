@@ -42,5 +42,7 @@ public class CountInversion {
         }
         while(i<a.length) c[k++] = a[i++];
         while(j<b.length) c[k++] = b[j++];
+
+        //TAKES LESS TIME AND AVOIDS ERROR LIKE TIME LIMIT EXCEEDED(T.L.E)
     }
 }
