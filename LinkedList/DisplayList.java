@@ -9,10 +9,13 @@ class Node{
 public class DisplayList {
     public static void display(Node head){
 
-        Node temp = head;
-        while(temp != null){
+//        Node temp = head;
+//        while(temp != null){
+//            System.out.print(temp.val+" ");
+//            temp = temp.next;  //Very Important
+//        }
+        for(Node temp=head; temp!=null; temp=temp.next){
             System.out.print(temp.val+" ");
-            temp = temp.next;  //Very Important
         }
         System.out.println();
 
