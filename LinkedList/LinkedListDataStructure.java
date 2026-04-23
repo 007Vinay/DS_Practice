@@ -12,6 +12,8 @@ class Node { //user defined data type
 class Linkedlist{  //user defined data structure
     Node head;  //null
     Node tail; //null
+    int size;
+
     void addAtHead(int val) {
         Node temp = new Node(val);
         if(head==null) head = tail = temp;
@@ -19,6 +21,7 @@ class Linkedlist{  //user defined data structure
             temp.next = head;
             head = temp;
         }
+        size++;
     }
     void addAtTail(int val){
         Node temp = new Node(val);
@@ -27,8 +30,18 @@ class Linkedlist{  //user defined data structure
             tail.next = temp;
             tail = temp;
         }
-    }
+        size++;
 
+    }
+    void  deleteAtHead(){
+        if(head==null){
+            System.out.println("List is Empty!");
+            return;
+        }
+       head = head.next;
+        if(head==null) tail=null;
+        size--;
+    }
     void display() {
         if(head==null)  return;
         Node temp=head;
@@ -38,7 +51,6 @@ class Linkedlist{  //user defined data structure
         }
         System.out.println();
     }
-
 
 }
 public class LinkedListDataStructure {
@@ -52,5 +64,7 @@ public class LinkedListDataStructure {
         ll.addAtHead(50);
         ll.addAtHead(60);
         ll.display();
+        ll.deleteAtHead(); ll.display();
+        System.out.println(ll.size);
     }
 }
