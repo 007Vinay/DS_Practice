@@ -1,8 +1,6 @@
 package Arrays;
 
-import java.util.Scanner;
-
-public class LinarSearch {
+public class LinearSearch {
     public static void main(String[] args) {
         int[] arr = {12, 3,27,53,18,62,88,6};
         int target = 18;
